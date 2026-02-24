@@ -1,1 +1,2 @@
-### TreePlant -> EnemySpawn -> FirstTurn -> CombatTurns -> EnemyBehaviour -> SpellThrow -> CombatEnd
+### TreePlant -> EnemySpawn -> FirstTurn -> CombatTurns -> EnemyBehaviour -> SpellThrow -> CombatEnd (game over)
+### TreePlant -> EnemySpawn -> FirstTurn -> CombatTurns -> EnemyBehaviour -> SpellThrow -> CombatWin (return to free roam map)
