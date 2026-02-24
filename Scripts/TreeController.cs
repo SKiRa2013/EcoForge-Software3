@@ -1,35 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditorInternal;
-using UnityEngine;
-using UnityEngine.Analytics;
+﻿using UnityEngine;
 
 public class TreeController : MonoBehaviour {
     public bool isSeedPlanted;
-    bool isValid;
+    public bool isValid;
+    
     float timer;
+
+    public GameObject objBackground;
 
     // Start is called before the first frame update
     void Start() {
         isValid = false;
+        objBackground = GameObject.Find("background");
     }
 
     // Update is called once per frame
     void Update() {
         if (isSeedPlanted) return;
-        
-        timer += Time.deltaTime;
+
+        if(timer < 0.2f) timer += Time.deltaTime;
 
         if (timer >= 0.2f) {
-            timer = 0f;
-
             if (!isValid) {
+                objBackground.GetComponent<TreePlantController>().plantedNormal--;
                 Destroy(gameObject.transform.parent.gameObject);
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other) {
+    
+    private void OnTriggerStay2D(Collider2D other) {
         if (isValid) return;
 
         isValid = other.CompareTag("TreeArea") && other.transform.parent != transform.parent;
