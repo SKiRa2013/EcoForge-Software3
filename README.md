@@ -1,1 +1,1 @@
-### TreePlant -> EnemySpawn -> FirstTurn -> CombatTurns -> EnemyBehaviour -> SpellThrow
+### TreePlant -> EnemySpawn -> FirstTurn -> CombatTurns -> EnemyBehaviour -> SpellThrow -> CombatEnd
