@@ -20,6 +20,8 @@ public class EnemySpawn : MonoBehaviour {
     private TreePlantController plantController;
     private Camera cam;
 
+    public GameObject battleExport;
+
     // Start is called before the first frame update
     void Start() {
         plantController = gameObject.GetComponent<TreePlantController>();
@@ -89,7 +91,11 @@ public class EnemySpawn : MonoBehaviour {
                 spawnQuantity = (int)(Random.Range(0, 6) / 2.5f) + 2;
                 enemy.GetComponent<EnemyController>().enemyQuantity = spawnQuantity;
 
-                enemySpawned = true;  
+                enemySpawned = true;
+
+                Debug.LogWarning($"Enemigos: {spawnQuantity}");
+
+                battleExport.GetComponent<EnemyForBattle>().quantity = spawnQuantity;
             } 
             
         }

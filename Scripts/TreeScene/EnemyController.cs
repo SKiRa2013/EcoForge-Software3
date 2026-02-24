@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour {
     private GameObject player;
@@ -16,14 +17,18 @@ public class EnemyController : MonoBehaviour {
 
     public char orientation;
 
+    public GameObject enemyExport;
+
     void Start() {
         anim = GetComponent<Animator>();
         player = GameObject.Find("Player");
         arrived = false;
 
-        speed = 20f;
+        speed = 120f;
         stopDistance = 40f;
         orientation = 'F';
+
+        enemyExport = GameObject.Find("BattleExport");
     }
 
     void Update() {
@@ -60,21 +65,28 @@ public class EnemyController : MonoBehaviour {
     void StartBattle() {
         char playerOrientation = player.GetComponent<PlayerController>().orientation;
 
+        Debug.LogWarning($"Orientación => Jugador: {playerOrientation}, Enemigos: {orientation}");
+
         // Vertical, turno para jugador
         if ((playerOrientation == 'F' && orientation == 'B') || (playerOrientation == 'B' && orientation == 'F')) {
             Debug.LogWarning("Turno para jugador - Vertical");
+            enemyExport.GetComponent<EnemyForBattle>().playerTurn = true;
+            SceneManager.LoadScene("BattleScene");
             return;
         }
 
         // Horizontal, turno para jugador
         if ((playerOrientation == 'L' && orientation == 'R') || (playerOrientation == 'R' && orientation == 'L')) {
             Debug.LogWarning("Turno para jugador - Horizontal");
+            enemyExport.GetComponent<EnemyForBattle>().playerTurn = true;
+            SceneManager.LoadScene("BattleScene");
             return;
         }
 
         // Turno para enemigos
         Debug.LogWarning("Turno para enemigos");
-
+        enemyExport.GetComponent<EnemyForBattle>().playerTurn = false;
+        SceneManager.LoadScene("BattleScene");
     }
 
     void ActualizarAnimaciones() {

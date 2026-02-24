@@ -27,8 +27,10 @@ public class TreePlantController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (timer > 1000f) timer = plantCooldown + 0.1f;
+        
         timer += Time.deltaTime;
-
+        
         if (timer >= plantCooldown) {
             if (Input.GetKeyDown("space")) {
                 GameObject tree = Instantiate(treePrefab, GetMousePos(), Quaternion.identity);
