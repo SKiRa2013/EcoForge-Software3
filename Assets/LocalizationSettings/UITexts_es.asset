@@ -1,0 +1,214 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UITexts_es
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 94716aedc97d3804c8a80c43885d823b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 216942940160
+    m_Localized: JUGAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396400431104
+    m_Localized: CARGAR PARTIDA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 563140792320
+    m_Localized: OPCIONES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304278503424
+    m_Localized: CREDITOS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1371622248448
+    m_Localized: SALIR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1514564128768
+    m_Localized: CONTROLES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1511212879872
+    m_Localized: AUDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513691713536
+    m_Localized: GRAFICOS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1515407183872
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1516308959232
+    m_Localized: APLICAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1518489997312
+    m_Localized: CANCELAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1519395966976
+    m_Localized: REGRESAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1524131336192
+    m_Localized: Descartar y salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1522080321536
+    m_Localized: Aplicar y salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521207906304
+    m_Localized: "Cambios sin aplicar \xBFQue deseas?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 598113661128704
+    m_Localized: "Agradecimientos Especiales\nA todas las personas que respondieron
+      la encuesta.\nA nuestras familias, por su apoyo constante durante el desarrollo
+      del proyecto.\nA la profesora Sandra Vallejo, por su orientaci\xF3n y acompa\xF1amiento.\nY
+      a ti, por jugar y ser parte de esta experiencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 599179286974464
+    m_Localized: Equipo Creativo de EcoForge
+    m_Metadata:
+      m_Items: []
+  - m_Id: 601721848893440
+    m_Localized: "Equipo de Desarrollo y Dise\xF1o del Juego"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1715454088220672
+    m_Localized: NUEVA PARTIDA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1715768199647232
+    m_Localized: Ingresa un nombre para tu partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1716283784466432
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720954402017280
+    m_Localized: "El nombre no puede estar vac\xEDo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720957572911104
+    m_Localized: "M\xEDnimo 3 caracteres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720962425720832
+    m_Localized: "M\xE1ximo 20 caracteres"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720970441035776
+    m_Localized: Ya existe una partida con ese nombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720977298722816
+    m_Localized: No hay slots disponibles. Borra una partida primero
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158554818830336
+    m_Localized: "Menu Navegaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159972422279168
+    m_Localized: Lenguaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2160545028661248
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162490946641920
+    m_Localized: Volumen General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162944304766976
+    m_Localized: Volumen Musica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2163367229022208
+    m_Localized: Volumen Efectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2163760818315264
+    m_Localized: Dispositivos de Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2166625200791552
+    m_Localized: Reemplazar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2167849975308288
+    m_Localized: Restablecer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168764753010688
+    m_Localized: Movimiento de Personaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168952074821632
+    m_Localized: Otros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170030623318016
+    m_Localized: Recolectar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170351605014528
+    m_Localized: Plantar con Semilla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170662964977664
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172054580518912
+    m_Localized: Arriba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172240325271552
+    m_Localized: Abajo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172637290979328
+    m_Localized: Derecha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2174210847039488
+    m_Localized: Izquierda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176340211294208
+    m_Localized: Resolucion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176533925224448
+    m_Localized: Calidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176951338164224
+    m_Localized: Pantalla Completa
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
