@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UITexts Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UITexts
+  m_TableCollectionNameGuidString: 94716aedc97d3804c8a80c43885d823b
+  m_Entries:
+  - m_Id: 216942940160
+    m_Key: iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396400431104
+    m_Key: cargar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 563140792320
+    m_Key: opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1304278503424
+    m_Key: creditos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1371622248448
+    m_Key: salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1511212879872
+    m_Key: audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1513691713536
+    m_Key: graficos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1514564128768
+    m_Key: controles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1515407183872
+    m_Key: general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1516308959232
+    m_Key: aplicar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1518489997312
+    m_Key: cancelar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1519395966976
+    m_Key: regresar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1521207906304
+    m_Key: popup_mensaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1522080321536
+    m_Key: popup_aplicar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1524131336192
+    m_Key: popup_descartar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 598113661128704
+    m_Key: agradecimientosEspeciales
+    m_Metadata:
+      m_Items: []
+  - m_Id: 599179286974464
+    m_Key: titulo_equipoCreativo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 601721848893440
+    m_Key: titulo_equipoDesarrollo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1715454088220672
+    m_Key: nueva_partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1715768199647232
+    m_Key: instruccion_NuevaPartida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1716283784466432
+    m_Key: confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720954402017280
+    m_Key: error_nombre_vacio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720957572911104
+    m_Key: error_nombre_corto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720962425720832
+    m_Key: error_nombre_largo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720970441035776
+    m_Key: error_nombre_duplicado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1720977298722816
+    m_Key: error_slots_llenos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2158554818830336
+    m_Key: navegacion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2159972422279168
+    m_Key: lenguaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2160545028661248
+    m_Key: "espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162490946641920
+    m_Key: volumengeneral
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2162944304766976
+    m_Key: volumenmusica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2163367229022208
+    m_Key: volumenefectos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2163760818315264
+    m_Key: Dispositivos de Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2166625200791552
+    m_Key: reemplazar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2167849975308288
+    m_Key: restablecer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168764753010688
+    m_Key: movimientopersonaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2168952074821632
+    m_Key: otro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170030623318016
+    m_Key: recolectar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170351605014528
+    m_Key: plantarsemilla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2170662964977664
+    m_Key: pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172054580518912
+    m_Key: arriba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172240325271552
+    m_Key: abajo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2172637290979328
+    m_Key: derecha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2174210847039488
+    m_Key: izquierda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176340211294208
+    m_Key: resolucion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176533925224448
+    m_Key: calidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2176951338164224
+    m_Key: pantallacompleta
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 976471138728411419
+  references:
+    version: 2
+    RefIds:
+    - rid: 976471138728411419
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1773614732511
