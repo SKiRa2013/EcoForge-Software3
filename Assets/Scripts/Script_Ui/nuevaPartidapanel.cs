@@ -12,21 +12,15 @@ public class NuevaPartidaPanel : MonoBehaviour
     public Button btnConfirmar;
     public Button btnCancelar;
 
-    [Header("Panel padre")]
-    public GameObject panelNuevaPartida;
-
     int slotSeleccionado = -1;
 
     void Start()
     {
-        if (txtError != null)
-            txtError.text = "";
-
-        if (panelNuevaPartida != null)
-            panelNuevaPartida.SetActive(false);
+        if (txtError     != null) txtError.text = "";
+        if (btnConfirmar != null) btnConfirmar.interactable = false;
     }
 
-    // ── Obtener texto localizado ──
+    // ── Texto localizado ──
     string ObtenerTexto(string key)
     {
         try
@@ -35,7 +29,6 @@ public class NuevaPartidaPanel : MonoBehaviour
         }
         catch
         {
-            // Fallback si la localización no está lista
             switch (key)
             {
                 case "error_nombre_vacio":     return "El nombre no puede estar vacío";
@@ -50,82 +43,51 @@ public class NuevaPartidaPanel : MonoBehaviour
 
     void MostrarError(string key)
     {
-        if (txtError != null)
-            txtError.text = ObtenerTexto(key);
-
-        if (btnConfirmar != null)
-            btnConfirmar.interactable = false;
+        if (txtError     != null) txtError.text = ObtenerTexto(key);
+        if (btnConfirmar != null) btnConfirmar.interactable = false;
     }
 
     void LimpiarError()
     {
-        if (txtError != null)
-            txtError.text = "";
+        if (txtError != null) txtError.text = "";
     }
 
-    // ── Abrir panel para nueva partida ──
+    // ── Llamado desde MenuManager al abrir el panel ──
     public void AbrirNuevaPartida()
     {
         slotSeleccionado = SaveSystem.ObtenerSlotLibre();
 
+        if (inputNombre  != null) inputNombre.text = "";
+        if (btnConfirmar != null) btnConfirmar.interactable = false;
+        LimpiarError();
+
         if (slotSeleccionado == -1)
         {
             MostrarError("error_slots_llenos");
-
-            if (panelNuevaPartida != null)
-                panelNuevaPartida.SetActive(true);
-
-            if (btnConfirmar != null)
-                btnConfirmar.interactable = false;
-
             return;
         }
 
-        if (inputNombre  != null) inputNombre.text = "";
-        LimpiarError();
+        if (inputNombre != null) inputNombre.Select();
 
-        if (btnConfirmar != null) btnConfirmar.interactable = false;
-        if (panelNuevaPartida != null) panelNuevaPartida.SetActive(true);
-        if (inputNombre  != null) inputNombre.Select();
+        Debug.Log("NuevaPartidaPanel abierto. Slot disponible: " + slotSeleccionado);
     }
 
-    // ── Validar nombre mientras escribe ──
+    // ── Validar mientras escribe ──
     public void OnNombreCambiado(string valor)
     {
         LimpiarError();
 
         string nombre = valor.Trim();
 
-        if (string.IsNullOrEmpty(nombre))
-        {
-            MostrarError("error_nombre_vacio");
-            return;
-        }
+        if (string.IsNullOrEmpty(nombre))   { MostrarError("error_nombre_vacio");     return; }
+        if (nombre.Length < 3)              { MostrarError("error_nombre_corto");     return; }
+        if (nombre.Length > 20)             { MostrarError("error_nombre_largo");     return; }
+        if (SaveSystem.NombreExiste(nombre)){ MostrarError("error_nombre_duplicado"); return; }
 
-        if (nombre.Length < 3)
-        {
-            MostrarError("error_nombre_corto");
-            return;
-        }
-
-        if (nombre.Length > 20)
-        {
-            MostrarError("error_nombre_largo");
-            return;
-        }
-
-        if (SaveSystem.NombreExiste(nombre))
-        {
-            MostrarError("error_nombre_duplicado");
-            return;
-        }
-
-        // Todo válido
-        if (btnConfirmar != null)
-            btnConfirmar.interactable = true;
+        if (btnConfirmar != null) btnConfirmar.interactable = true;
     }
 
-    // ── Confirmar y crear partida ──
+    // ── Confirmar ──
     public void Confirmar()
     {
         string nombre = inputNombre.text.Trim();
@@ -146,14 +108,18 @@ public class NuevaPartidaPanel : MonoBehaviour
         PlayerPrefs.SetInt("slotActivo", slotSeleccionado);
         PlayerPrefs.Save();
 
+        Debug.Log("Partida creada: " + nombre + " en slot " + slotSeleccionado);
+
         SceneManager.LoadScene("Juego");
     }
 
-    // ── Cancelar ──
+    // ── Cancelar ── MenuManager maneja cerrar el panel
     public void Cancelar()
     {
-        if (panelNuevaPartida != null) panelNuevaPartida.SetActive(false);
-        if (inputNombre       != null) inputNombre.text = "";
+        if (inputNombre != null) inputNombre.text = "";
         LimpiarError();
+
+        // Volver al menú principal
+        FindFirstObjectByType<MenuManager>()?.VolverMenu();
     }
 }

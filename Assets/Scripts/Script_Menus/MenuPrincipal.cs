@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("Panels")]
+    [Header("Panels principales")]
     public GameObject panelMenuPrincipal;
     public GameObject panelPartidas;
     public GameObject panelOpciones;
@@ -12,7 +12,10 @@ public class MenuManager : MonoBehaviour
     public GameObject panelControles;
     public GameObject panelIdioma;
     public GameObject panelCreditos;
-    public GameObject panelNuevaPartida;
+
+    [Header("Subpaneles de partidas")]
+    public GameObject panelNuevaPartida;   // hijo de panelPartidas
+    public GameObject panelCargarPartida;  // hijo de panelPartidas
 
     void Start()
     {
@@ -33,26 +36,39 @@ public class MenuManager : MonoBehaviour
         panelControles.SetActive(false);
         panelIdioma.SetActive(false);
         panelCreditos.SetActive(false);
-        panelNuevaPartida.SetActive(false);
+
+        // Desactivar subpaneles
+        if (panelNuevaPartida  != null) panelNuevaPartida.SetActive(false);
+        if (panelCargarPartida != null) panelCargarPartida.SetActive(false);
     }
 
-    // ── Jugar → abre panel nueva partida ──
+    // ── Botón JUGAR → abre nueva partida ──
     public void IniciarPartida()
     {
-        panelMenuPrincipal.SetActive(false);
-        panelNuevaPartida.SetActive(true);
+        Debug.Log("IniciarPartida llamado");
+        Debug.Log("panelMenuPrincipal: " + panelMenuPrincipal);
+        Debug.Log("panelPartidas: " + panelPartidas);
+        Debug.Log("panelNuevaPartida: " + panelNuevaPartida);
 
-        // Llamar al NuevaPartidaPanel para inicializarlo
-        var nuevaPartidaPanel = panelNuevaPartida.GetComponentInChildren<NuevaPartidaPanel>();
-        if (nuevaPartidaPanel != null)
-            nuevaPartidaPanel.AbrirNuevaPartida();
+        panelMenuPrincipal.SetActive(false);
+        panelPartidas.SetActive(true);
+        panelNuevaPartida.SetActive(true);
+        panelCargarPartida.SetActive(false);
+
+        var script = panelNuevaPartida.GetComponent<NuevaPartidaPanel>();
+        if (script != null)
+            script.AbrirNuevaPartida();
+        else
+            Debug.LogError("No se encontró NuevaPartidaPanel");
     }
 
-    // ── Abrir panel de partidas (guardar y cargar) ──
+    // ── Botón CARGAR PARTIDA → abre cargar partida ──
     public void AbrirPartidas()
     {
         panelMenuPrincipal.SetActive(false);
         panelPartidas.SetActive(true);
+        panelNuevaPartida.SetActive(false);
+        panelCargarPartida.SetActive(true);
     }
 
     // ══════════════════════════════════════════
@@ -117,7 +133,8 @@ public class MenuManager : MonoBehaviour
         panelOpciones.SetActive(false);
         panelCreditos.SetActive(false);
         panelPartidas.SetActive(false);
-        panelNuevaPartida.SetActive(false);
+        if (panelNuevaPartida  != null) panelNuevaPartida.SetActive(false);
+        if (panelCargarPartida != null) panelCargarPartida.SetActive(false);
         panelMenuPrincipal.SetActive(true);
     }
 

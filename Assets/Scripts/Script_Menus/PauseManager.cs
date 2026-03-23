@@ -86,7 +86,11 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         juegoPausado = false;
     }
-
+    public void GuardarDesdePausa()
+    {
+        GameManager.Instance?.GuardarPartidaActiva();
+        
+    }
     public void VolverMenu()
     {
         // Resetear estado antes de salir

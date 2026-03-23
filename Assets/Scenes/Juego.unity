@@ -1571,7 +1571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &507439806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396392,7 +396392,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 661959487}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
-        m_MethodName: VolverMenu
+        m_MethodName: GuardarDesdePausa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
